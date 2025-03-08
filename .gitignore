@@ -1,0 +1,19 @@
+# Ignore Terraform state files and backups
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform lock file (optional, but recommended)
+.terraform.lock.hcl
+
+# Ignore Terraform working directory
+.terraform/
+
+# Ignore any sensitive files (if they exist)
+*.pem
+*.key
+*.json  # If you have GCP service account keys
+
+# Ignore editor/OS-specific files
+.DS_Store
+.idea/
+.vscode/
