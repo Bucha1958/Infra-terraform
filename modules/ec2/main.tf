@@ -6,6 +6,6 @@ resource "aws_instance" "this" {
   key_name        = var.key_name
 
   tags = {
-    Name = var.instance_name
+    Name = var.instance_name # ✅ Uses the instance_name variable
   }
 }

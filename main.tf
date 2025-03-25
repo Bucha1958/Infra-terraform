@@ -230,5 +230,9 @@ module "ec2_instance" {
   security_group_id = module.security_group.security_group_id
   key_name          = "stanley_key"
   count = 3
-  instance_name     = "carepulse-${count.index + 1}"
+
+  instance_name = element(["master_node", "worker_one", "worker_two"], count.index)
+  tags = {
+    Name = element(["master_node", "worker_one", "worker_two"], count.index)
+  }
 }
